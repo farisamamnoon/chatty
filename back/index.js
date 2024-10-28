@@ -1,6 +1,5 @@
 const http = require("http").createServer((req, res) => {
-  console.log("The server is running properly");
-  res.end();
+  res.end("HG");
 });
 
 const io = require("socket.io")(http, {
