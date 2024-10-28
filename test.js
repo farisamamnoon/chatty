@@ -1,4 +1,4 @@
-const socket = io("ws://localhost:8080");
+const socket = io("https://chat-2ir7.onrender.com");
 
 socket.on("message", (message) => {
   const el = document.createElement("li");
