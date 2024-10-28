@@ -8,10 +8,10 @@ const io = require("socket.io")(http, {
 
 io.on("connection", (socket) => {
   socket.on("message", (text) => {
-    socket.emit("message", text);
+    io.emit("message", `message: ${text}`);
   });
 });
 
-http.listen(5000, () => {
-  console.log("server listening to 5000");
+http.listen(8080, () => {
+  console.log("server listening to 8080");
 });
